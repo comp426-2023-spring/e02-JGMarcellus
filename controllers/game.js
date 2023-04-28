@@ -1,4 +1,6 @@
 
+// API Brains
+
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
@@ -9,13 +11,13 @@ export function rps(player_input) {
   let opponent = valid[getRandomInt(3)];
   
   if (player_input == undefined) {
-      let result = '{"player":' + '"' + opponent + '"' + '}';
-      return result;
+        let result = '{"player":' + '"' + opponent + '"' + '}';
+        return result;
   }
   
   else {
-              let result = '{"player":' + '"' + player_input + '",' + '"opponent":' + '"' + opponent + '",' + '"result":' + '"' + win_loss(player_input, opponent) + '"}';
-            return result;
+        let result = '{"player":' + '"' + player_input + '",' + '"opponent":' + '"' + opponent + '",' + '"result":' + '"' + win_loss(player_input, opponent) + '"}';
+        return result;
       
   }
 }
@@ -26,12 +28,12 @@ export function rpsls(player_input) {
   let opponent = valid[getRandomInt(5)];
   
   if (player_input == undefined) {
-      let result = '{"player":' + '"' + opponent + '"' + '}';
-      return result;
+        let result = '{"player":' + '"' + opponent + '"' + '}';
+        return result;
   }
   else if (valid.includes(player_input)) {
-              let result = '{"player":' + '"' + player_input + '",' + '"opponent":' + '"' + opponent + '",' + '"result":' + '"' + win_loss(player_input, opponent) + '"}';
-            return result;
+        let result = '{"player":' + '"' + player_input + '",' + '"opponent":' + '"' + opponent + '",' + '"result":' + '"' + win_loss(player_input, opponent) + '"}';
+        return result;
       
   }
 }

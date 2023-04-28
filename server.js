@@ -62,6 +62,10 @@ const app = express()
 // Set a port for the server to listen on
 const port = args.port || args.p || process.env.PORT || 8080
 
+//
+// Start of my code
+//
+
 // Add API endpoints
 import { rpsls } from './controllers/game.js';
 import { rps } from './controllers/game.js';
@@ -116,10 +120,9 @@ app.get("/app/", function(req, res) {
     res.status(200).send("200 OK").end();
 });
 
-app.get("*", function(req, res) {
-    res.status(404).send("404 NOT FOUND").end();
-});
-
+//
+// End of my code
+//
 
 // Load app middleware here to serve routes, accept data requests, etc.
 //
